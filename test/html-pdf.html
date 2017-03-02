@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)https://www.npmjs.com/package/html-pdf -->
+<html lang="en" prefix="og: http://ogp.me/ns#" class=" js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">.autocomplete-container {  overflow: visible;}.autocomplete-suggestions {  border: 1px solid #999;  background: #FFF;  overflow-x: hidden;  overflow-y: auto;  cursor: default;}.autocomplete-suggestion {  padding: 2px 5px;  white-space: nowrap;  overflow: hidden;}.autocomplete-selected {  background: #F0F0F0;}.autocomplete-container strong {  font-weight: bold;}#powered-by-constructor-io {  font-size: 0.8em;  text-align:right;  background-color:rgb(255,255,192);  font-family:sans-serif;  padding: 4px 10px;  position: absolute;  border: 1px solid #999;}#constructorio-backing-node {  background-color:rgb(255,255,255);  padding: 4px 10px;  position: absolute;  border: 1px solid #FFF;}.autocomplete-suggestion-image {  float:left;  padding-right: 10px;}#autocomplete-direct-results:before {  content:'Products'}#autocomplete-search-container:before {  content:'Search Suggestions'}.autocomplete-suggestion-description {  font-size: 0.8em;  display: block;  margin-left: 10px;  line-height: 1.0em;}</style>
+  
+  
+  <title>html-pdf</title>
+
+    <meta name="description" content="HTML to PDF converter that uses phantomjs">
+    <meta property="og:description" content="HTML to PDF converter that uses phantomjs">
+    <meta property="og:title" content="html-pdf">
+    <meta property="og:url" content="https://www.npmjs.com/package/html-pdf">
+    <meta property="og:site_name" content="npm">
+    <meta name="keywords" content="html,pdf,phantom,phantomjs,nodejs">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="https://www.npmjs.com/package/html-pdf">
+    <meta name="twitter:title" content="npm: html-pdf">
+    <meta name="twitter:description" content="HTML to PDF converter that uses phantomjs">
+  
+  
+  <meta http-equiv="cleartype" content="on">
+  
+  <meta name="apple-mobile-web-app-capable" content="no">
+  
+  
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,initial-scale=1,user-scalable=yes">
+  
+  <meta name="x-npm:ga:id" content="UA-47041310-1">
+  <meta name="x-npm:ga:dimensions" content="{&quot;aboveChrome&quot;:&quot;dimension1&quot;,&quot;belowHeader&quot;:&quot;dimension3&quot;,&quot;packagePage&quot;:&quot;dimension2&quot;}">
+  
+  <link rel="canonical" href="https://www.npmjs.com/package/html-pdf">
+  <link rel="search" type="application/opensearchdescription+xml" href="https://www.npmjs.com/opensearch.xml" title="npm">
+
+    <link rel="stylesheet" media="all" href="./html-pdf_files/index.css">
+
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <![endif]-->
+
+  <link rel="stylesheet" href="./html-pdf_files/css">
+  
+    <script type="text/javascript" async="" src="./html-pdf_files/ec.js.download"></script><script async="" src="./html-pdf_files/analytics.js.download"></script><script src="./html-pdf_files/index.min.js.download"></script>
+    <style>
+      .marketing {
+  margin: 0px;
+  margin-left: -10px;
+  margin-bottom: 40px;
+  padding: 0px 0px;
+  font-size: 15px;
+  font-style: normal;
+  fond-variant: normal;
+  fort-weight: normal;
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: 2px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.4);
+  text-decoration: none;
+  letter-spacing: -0.03em;
+  line-height: 22.5px;
+  }
+  
+  .marketing a {
+  font-weight: 400;
+  text-decoration: none;
+  color: #cb3837;
+  }
+  
+  .marketing h3 {
+  display: block;
+  margin: 0;
+  padding: 20px 0 10px 0;
+  font-size: 20px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 22px;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .marketing h3 a {
+  color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .marketing h3 a:hover {
+  color: #cb3837;
+  }
+  
+  .marketing p {
+  line-height: 22.5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  }
+  
+  .marketing p a {
+  white-space: nowrap;
+  }
+  
+  #marketing-texthed {
+  margin-left: 10px;
+  }
+    </style>
+  <link rel="apple-touch-icon" sizes="57x57" href="https://www.npmjs.com/static/images/touch-icons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="https://www.npmjs.com/static/images/touch-icons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="https://www.npmjs.com/static/images/touch-icons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://www.npmjs.com/static/images/touch-icons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="https://www.npmjs.com/static/images/touch-icons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="https://www.npmjs.com/static/images/touch-icons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="https://www.npmjs.com/static/images/touch-icons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://www.npmjs.com/static/images/touch-icons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://www.npmjs.com/static/images/touch-icons/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="https://www.npmjs.com/static/images/touch-icons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="https://www.npmjs.com/static/images/touch-icons/favicon-230x230.png" sizes="230x230">
+  <link rel="icon" type="image/png" href="https://www.npmjs.com/static/images/touch-icons/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="https://www.npmjs.com/static/images/touch-icons/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="https://www.npmjs.com/static/images/touch-icons/coast-228x228.png" sizes="228x228">
+  <link rel="icon" type="image/png" href="https://www.npmjs.com/static/images/touch-icons/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="https://www.npmjs.com/static/images/touch-icons/manifest.json">
+  <link rel="yandex-tableau-widget" href="https://www.npmjs.com/static/images/touch-icons/yandex-browser-manifest.json">
+  <meta property="og:image" content="https://www.npmjs.com/static/images/touch-icons/open-graph.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="msapplication-TileColor" content="#cb3837">
+  <meta name="msapplication-TileImage" content="/static/images/touch-icons/mstile-144x144.png">
+  <meta name="msapplication-config" content="/static/images/touch-icons/browserconfig.xml">
+  <meta name="theme-color" content="#cb3837">
+
+<style id="iconic-responsive-css" type="text/css">/* Iconic Responsive Support Styles */
+.iconic-property-fill, .iconic-property-text {stroke: none !important;}
+.iconic-property-stroke {fill: none !important;}
+svg.iconic.iconic-fluid {height:100% !important;width:100% !important;}
+svg.iconic.iconic-sm:not(.iconic-size-md):not(.iconic-size-lg), svg.iconic.iconic-size-sm{width:16px;height:16px;}
+svg.iconic.iconic-md:not(.iconic-size-sm):not(.iconic-size-lg), svg.iconic.iconic-size-md{width:32px;height:32px;}
+svg.iconic.iconic-lg:not(.iconic-size-sm):not(.iconic-size-md), svg.iconic.iconic-size-lg{width:128px;height:128px;}
+svg.iconic-sm > g.iconic-md, svg.iconic-sm > g.iconic-lg, svg.iconic-md > g.iconic-sm, svg.iconic-md > g.iconic-lg, svg.iconic-lg > g.iconic-sm, svg.iconic-lg > g.iconic-md {display: none;}
+svg.iconic.iconic-icon-sm > g.iconic-lg, svg.iconic.iconic-icon-md > g.iconic-lg {display:none;}
+svg.iconic-sm:not(.iconic-icon-md):not(.iconic-icon-lg) > g.iconic-sm, svg.iconic-md.iconic-icon-sm > g.iconic-sm, svg.iconic-lg.iconic-icon-sm > g.iconic-sm {display:inline;}
+svg.iconic-md:not(.iconic-icon-sm):not(.iconic-icon-lg) > g.iconic-md, svg.iconic-sm.iconic-icon-md > g.iconic-md, svg.iconic-lg.iconic-icon-md > g.iconic-md {display:inline;}
+svg.iconic-lg:not(.iconic-icon-sm):not(.iconic-icon-md) > g.iconic-lg, svg.iconic-sm.iconic-icon-lg > g.iconic-lg, svg.iconic-md.iconic-icon-lg > g.iconic-lg {display:inline;}</style><style>.autocomplete-container, .autocomplete-suggestions, #powered-by-constructor-io { width: NaNpx !important }</style></head>
+
+<body itemscope="" itemtype="http://schema.org/WebSite" data-crumb="jRCAyfExDomJeUMBRL6c5OlD4PAbu7bpVOHs6tdqTql">
+  <meta itemprop="url" content="https://www.npmjs.com/">
+
+
+  <header class="anonymous   ">
+  <!-- logo -->
+  <div class="header-item brand-container">
+    <div class="logo-container" id="npm-logo">
+      <a href="https://www.npmjs.com/"><svg viewBox="0 0 18 7">
+	<path fill="#CB3837" d="M0,0v6h5v1h4v-1h9v-6"></path>
+	<path fill="#FFF" d="M1,1v4h2v-3h1v3h1v-4h1v5h2v-4h1v2h-1v1h2v-4h1v4h2v-3h1v3h1v-3h1v3h1v-4"></path>
+</svg></a>
+    </div>
+  </div>
+  <!-- /logo -->
+
+  <!-- search -->
+  <div class="header-item header-search-container">
+    <form class="site-search" id="npm-search" action="https://www.npmjs.com/search" method="get" itemprop="potentialAction" itemscope="" itemtype="http://schema.org/SearchAction">
+      <meta itemprop="target" content="https://www.npmjs.com/search?q={q}">
+      <div id="site-search-container">
+          <input name="q" value="" type="search" id="site-search" placeholder="find packages" tabindex="1" autocorrect="off" autocapitalize="off" itemprop="query-input" autocomplete="off">
+      </div>
+      <button tabindex="2" type="submit">
+        <span class="a11y-only">Search</span>
+        <svg viewBox="0 0 34 34" fill="none" stroke="currentColor">
+    <ellipse stroke-width="3" cx="16" cy="15" rx="12" ry="12"></ellipse>
+    <path d="M26 26 l 8 8" stroke-width="3" stroke-linecap="square"></path>
+</svg>
+      </button>
+    </form>
+  </div>
+
+
+  <!-- menu 1 -->
+  <div class="header-item user-info-container">
+    <div class="user-info">
+        <ul class="user-info-salutation single">
+          <li><a href="https://www.npmjs.com/signup">sign up</a> or <a href="https://www.npmjs.com/login">log in</a></li>
+          <li><a href="https://www.npmjs.com/login"><span class="a11y-only">log in</span><svg viewBox="-2765 2857 1080 1080">
+  <path fill="#986844" d="M-1811.2 3598.5c-.1-4.3-.3-11.3-.8-20.3-.9-15.8-2.7-40.9-6.6-70.7-6.9-52.6-21.6-130.1-52.6-200.4-22.3-50.4-53.5-97.1-90.3-135.2-4.4-20.5-16.7-66.5-43.5-104.8l-5-7.2-54 35.5c-44.5-22.4-91-33.7-138.6-33.7-47.5 0-94.1 11.3-138.6 33.7l-54-35.5-5 7.2c-26.8 38.3-39 84.3-43.5 104.8-36.8 38.1-68 84.8-90.3 135.3-31.1 70.3-45.8 147.8-52.6 200.4-6.1 46.6-7.2 81.6-7.5 93.8 16.6 14 31.3 29.8 46.9 45 17.2 16.7 39.4 28.2 59.1 41.6 1.7 1.1 3.1 2.6 4.2 4.1 15.7 10.4 31 15.4 50.2 19.5 19.2 4.1 35.6 5.6 55.6 7.3 38.7 3.2 77 7.7 115.5 12.6 43.1 5.4 86.5 11.5 130 13.1 41.6 1.5 81.8-9 121.8-19.3 8.9-2.3 17.9-4.5 26.8-6.8.6-4.2 3-8.1 6.7-10.4 40.1-25 81.2-48.2 122-72 5.9-3.5 13.7-1.9 17.9 3.3 9-8.9 17.1-18.2 24.3-27.9l.2-.2.2-.2c1.7-2.6 1.8-2.7 1.5-12.6z"></path>
+  <path fill="#FFF" d="M-1808.7 3494.8c-6.9-53.2-21.8-131.7-53.4-203.2-22.3-50.5-53.5-97.5-90.3-136.1-5.5-24.4-18.2-68.2-44.5-105.7l-10.6-15.1-57.3 37.7c-44.3-21.4-90.6-32.2-137.9-32.2-47.2 0-93.6 10.8-137.9 32.2l-57.3-37.7-10.6 15.1c-26.2 37.5-39 81.2-44.5 105.7-36.7 38.5-67.9 85.5-90.3 136.1-31.6 71.4-46.5 149.9-53.4 203.2-7.5 57.7-7.6 98-7.6 99.7v6.3l3.8 5.1c26 35 62.9 64.7 109.6 88.3 36.9 18.6 80 33.6 128.3 44.4 82.2 18.5 151.8 19 159.5 19h.6c7.7 0 77.3-.5 159.5-19 48.3-10.8 91.4-25.8 128.3-44.4 46.7-23.6 83.6-53.3 109.6-88.3l3.7-5v-6.3c.4-1.8.2-42.3-7.3-99.8zm-118.3 174.3c-34.8 17.6-75.8 31.8-121.8 42.1-80.7 18.1-150.4 18.3-153.4 18.3h-.6c-2.9 0-72.7-.2-153.4-18.3-46-10.3-87-24.5-121.8-42.1-41.7-21.1-74.7-47.2-98-77.6.4-22.5 5.1-167.5 58.6-288.5 21.8-49.3 52.4-94.9 88.5-131.8l1.8-1.9.5-2.6c2.7-13.1 12.9-56.4 36.3-93.4l37.2 24.5-7.3 16.6 22.8-11.9c43.3-22.6 88.7-34.1 135-34.1s91.7 11.5 135 34.1l22.8 11.9-7.3-16.6 37.2-24.5c23.4 37 33.6 80.4 36.3 93.4l.5 2.6 1.8 1.9c36.1 36.9 66.7 82.5 88.5 131.8 53.5 121 58.2 266.1 58.6 288.5-23.2 30.4-56.1 56.5-97.8 77.6zm-163-13c0 30.1-50.4 54.4-112.5 54.4s-112.5-24.4-112.5-54.4c0-30.1 50.4-54.4 112.5-54.4s112.5 24.3 112.5 54.4zm-223.5-65.3c0 12.3-10 22.3-22.3 22.3s-22.3-10-22.3-22.3 10-22.3 22.3-22.3c12.3-.1 22.3 9.9 22.3 22.3zm267.8 0c0 12.3-10 22.3-22.3 22.3s-22.3-10-22.3-22.3 10-22.3 22.3-22.3c12.3-.1 22.3 9.9 22.3 22.3z"></path>
+</svg></a></li>
+        </ul>
+    </div> <!-- .user-info -->
+  </div>
+  <!-- /menu 1 -->
+
+  <!-- menu 2 -->
+  <div class="header-item header-nav-menu-container">
+    <a href="https://www.npmjs.com/package/html-pdf#" id="npm-expansions" class="npm-expansions" data-event-trigger="click" data-event-name="npm-expansions">Nonlinear Performance Magnification</a>
+
+    <div class="nav-menu-container" role="navigation">
+      <a class="nav-toggle drop-down-menu-toggle" href="https://www.npmjs.com/package/html-pdf#product-navigation"><span class="a11y-only">Toggle Navigation</span>
+        <svg viewBox="0 0 44 44">
+    <rect x="4" y="12" fill="currentColor" width="36" height="2"></rect>
+    <rect x="4" y="20" fill="currentColor" width="36" height="2"></rect>
+    <rect x="4" y="28" fill="currentColor" width="36" height="2"></rect>
+</svg>
+      </a>
+
+
+      <div class="drop-down-menu-container" role="menu">
+        <nav id="product-navigation" class="product-navigation drop-down-menu">
+          <ul class="drop-down-menu-section products-list">
+            <li><a id="nav-enterprise-link" href="https://www.npmjs.com/npm/enterprise">npm Enterprise</a></li>
+            <li><a id="nav-features-link" href="https://www.npmjs.com/features" data-event-trigger="click" data-event-name="features-nav-link">features</a></li>
+            <li><a id="nav-pricing-link" href="https://www.npmjs.com/pricing">pricing</a></li>
+            <li><a id="nav-docs-link" href="https://docs.npmjs.com/">documentation</a></li>
+            <li><a id="nav-support-link" href="https://www.npmjs.com/support">support</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <!-- /menu 2 -->
+
+
+
+</header>
+
+
+
+
+    <div class="container content">
+      
+<div class="content-column">
+
+  <h1 class="package-name">
+    <a href="https://www.npmjs.com/package/html-pdf" class="active">html-pdf</a>
+      <i class="icon-public"></i>
+  </h1>
+  <p class="package-description">HTML to PDF converter that uses phantomjs</p>
+
+  <form class="star">
+    <input type="hidden" name="name" value="html-pdf">
+    <input id="star-input" type="checkbox" name="isStarred" value="true">
+    <label for="star-input" class="icon-star"></label>
+      <input type="hidden" name="crumb" value="jRCAyfExDomJeUMBRL6c5OlD4PAbu7bpVOHs6tdqTql">
+  </form>
+
+  <div id="readme" class="markdown">
+      <h1 class="package-name-redundant"><a id="user-content-node-html-pdf" class="deep-link" href="https://www.npmjs.com/package/html-pdf#node-html-pdf"><svg aria-hidden="true" class="deep-link-icon" height="16" version="1.1" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>node-html-pdf</h1>
+<h2><a id="user-content-html-to-pdf-converter-that-uses-phantomjs" class="deep-link" href="https://www.npmjs.com/package/html-pdf#html-to-pdf-converter-that-uses-phantomjs"><svg aria-hidden="true" class="deep-link-icon" height="16" version="1.1" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>HTML to PDF converter that uses phantomjs</h2>
+<p><img src="./html-pdf_files/businesscard.png" alt="image"><br>
+<a href="https://github.com/marcbachmann/node-html-pdf/blob/master/example/businesscard.pdf">Example Business Card</a><br>
+-&gt; <a href="https://github.com/marcbachmann/node-html-pdf/blob/master/example/businesscard.html">and its Source file</a></p>
+<p><a href="http://imgr-static.s3-eu-west-1.amazonaws.com/order.pdf">Example Receipt</a></p>
+<h2><a id="user-content-changelog" class="deep-link" href="https://www.npmjs.com/package/html-pdf#changelog"><svg aria-hidden="true" class="deep-link-icon" height="16" version="1.1" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Changelog</h2>
+<p>Have a look at the releases page: <a href="https://github.com/marcbachmann/node-html-pdf/releases">https://github.com/marcbachmann/node-html-pdf/releases</a></p>
+<h2><a id="user-content-installation" class="deep-link" href="https://www.npmjs.com/package/html-pdf#installation"><svg aria-hidden="true" class="deep-link-icon" height="16" version="1.1" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Installation</h2>
+<p>Install the html-pdf utility via <a href="http://npmjs.org/">npm</a>:</p>
+<div class="highlight"><pre class="editor editor-colors"><div class="line"><span class="text"><span>$&nbsp;npm&nbsp;install&nbsp;-g&nbsp;html-pdf</span></span></div></pre></div>
+<h2><a id="user-content-command-line-example" class="deep-link" href="https://www.npmjs.com/package/html-pdf#command-line-example"><svg aria-hidden="true" class="deep-link-icon" height="16" version="1.1" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Command-line example</h2>
+<div class="highlight"><pre class="editor editor-colors"><div class="line"><span class="text"><span>$&nbsp;html-pdf&nbsp;test/businesscard.html&nbsp;businesscard.pdf</span></span></div></pre></div>
+<h2><a id="user-content-code-example" class="deep-link" href="https://www.npmjs.com/package/html-pdf#code-example"><svg aria-hidden="true" class="deep-link-icon" height="16" version="1.1" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Code example</h2>
+<div class="highlight javascript"><pre class="editor editor-colors"><div class="line"><span class="source js"><span class="storage type js"><span>var</span></span><span>&nbsp;fs&nbsp;</span><span class="keyword operator assignment js"><span>=</span></span><span>&nbsp;</span><span class="meta function-call js"><span class="support function js"><span>require</span></span><span class="meta js"><span class="punctuation definition begin round js"><span>(</span></span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>'</span></span><span>fs</span><span class="punctuation definition string end js"><span>'</span></span></span><span class="punctuation definition end round js"><span>)</span></span></span></span><span class="punctuation terminator statement js"><span>;</span></span></span></div><div class="line"><span class="source js"><span class="storage type js"><span>var</span></span><span>&nbsp;pdf&nbsp;</span><span class="keyword operator assignment js"><span>=</span></span><span>&nbsp;</span><span class="meta function-call js"><span class="support function js"><span>require</span></span><span class="meta js"><span class="punctuation definition begin round js"><span>(</span></span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>'</span></span><span>html-pdf</span><span class="punctuation definition string end js"><span>'</span></span></span><span class="punctuation definition end round js"><span>)</span></span></span></span><span class="punctuation terminator statement js"><span>;</span></span></span></div><div class="line"><span class="source js"><span class="storage type js"><span>var</span></span><span>&nbsp;html&nbsp;</span><span class="keyword operator assignment js"><span>=</span></span><span>&nbsp;</span><span class="variable other object js"><span>fs</span></span><span class="meta js"><span class="meta delimiter method period js"><span>.</span></span><span class="entity name function js"><span>readFileSync</span></span><span class="meta js"><span class="punctuation definition begin round js"><span>(</span></span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>'</span></span><span>./test/businesscard.html</span><span class="punctuation definition string end js"><span>'</span></span></span><span class="meta delimiter object comma js"><span>,</span></span><span>&nbsp;</span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>'</span></span><span>utf8</span><span class="punctuation definition string end js"><span>'</span></span></span><span class="punctuation definition end round js"><span>)</span></span></span></span><span class="punctuation terminator statement js"><span>;</span></span></span></div><div class="line"><span class="source js"><span class="storage type js"><span>var</span></span><span>&nbsp;options&nbsp;</span><span class="keyword operator assignment js"><span>=</span></span><span>&nbsp;</span><span class="meta brace curly js"><span>{</span></span><span>&nbsp;format</span><span class="keyword operator js"><span>:</span></span><span>&nbsp;</span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>'</span></span><span>Letter</span><span class="punctuation definition string end js"><span>'</span></span></span><span>&nbsp;</span><span class="meta brace curly js"><span>}</span></span><span class="punctuation terminator statement js"><span>;</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;</span></span></div><div class="line"><span class="source js"><span class="variable other object js"><span>pdf</span></span><span class="meta js"><span class="meta delimiter method period js"><span>.</span></span><span class="entity name function js"><span>create</span></span><span class="meta js"><span class="punctuation definition begin round js"><span>(</span></span><span>html</span><span class="meta delimiter object comma js"><span>,</span></span><span>&nbsp;options</span><span class="punctuation definition end round js"><span>)</span></span></span><span class="meta delimiter method period js"><span>.</span></span><span class="entity name function js"><span>toFile</span></span><span class="meta js"><span class="punctuation definition begin round js"><span>(</span></span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>'</span></span><span>./businesscard.pdf</span><span class="punctuation definition string end js"><span>'</span></span></span><span class="meta delimiter object comma js"><span>,</span></span><span>&nbsp;</span><span class="meta function js"><span class="storage type function js"><span>function</span></span><span class="meta js"><span class="punctuation definition begin round js"><span>(</span></span><span class="variable function js"><span>err</span></span><span class="meta delimiter object comma js"><span>,</span></span><span>&nbsp;</span><span class="variable function js"><span>res</span></span><span class="punctuation definition end round js"><span>)</span></span></span></span><span>&nbsp;</span><span class="punctuation definition function begin curly js"><span>{</span></span></span></span></span></div><div class="line"><span class="source js"><span class="meta js"><span class="meta js"><span>&nbsp;&nbsp;</span><span class="keyword control js"><span>if</span></span><span>&nbsp;</span><span class="meta brace round js"><span>(</span></span><span>err</span><span class="meta brace round js"><span>)</span></span><span>&nbsp;</span><span class="keyword control js"><span>return</span></span><span>&nbsp;</span><span class="entity name type object console js"><span>console</span></span><span class="meta js"><span class="meta delimiter method period js"><span>.</span></span><span class="support function console js"><span>log</span></span><span class="meta js"><span class="punctuation definition begin round js"><span>(</span></span><span>err</span><span class="punctuation definition end round js"><span>)</span></span></span></span><span class="punctuation terminator statement js"><span>;</span></span></span></span></span></div><div class="line"><span class="source js"><span class="meta js"><span class="meta js"><span>&nbsp;&nbsp;</span><span class="entity name type object console js"><span>console</span></span><span class="meta js"><span class="meta delimiter method period js"><span>.</span></span><span class="support function console js"><span>log</span></span><span class="meta js"><span class="punctuation definition begin round js"><span>(</span></span><span>res</span><span class="punctuation definition end round js"><span>)</span></span></span></span><span class="punctuation terminator statement js"><span>;</span></span><span>&nbsp;</span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>//</span></span><span>&nbsp;{&nbsp;filename:&nbsp;'/app/businesscard.pdf'&nbsp;}</span><span>&nbsp;</span></span></span></span></span></div><div class="line"><span class="source js"><span class="meta js"><span class="meta js"><span class="punctuation definition function end curly js"><span>}</span></span><span class="punctuation definition end round js"><span>)</span></span></span></span><span class="punctuation terminator statement js"><span>;</span></span></span></div></pre></div>
+<h2><a id="user-content-api" class="deep-link" href="https://www.npmjs.com/package/html-pdf#api"><svg aria-hidden="true" class="deep-link-icon" height="16" version="1.1" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>API</h2>
+<div class="highlight js"><pre class="editor editor-colors"><div class="line"><span class="source js"><span class="storage type js"><span>var</span></span><span>&nbsp;pdf&nbsp;</span><span class="keyword operator assignment js"><span>=</span></span><span>&nbsp;</span><span class="meta function-call js"><span class="support function js"><span>require</span></span><span class="meta js"><span class="punctuation definition begin round js"><span>(</span></span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>'</span></span><span>html-pdf</span><span class="punctuation definition string end js"><span>'</span></span></span><span class="punctuation definition end round js"><span>)</span></span></span></span><span class="punctuation terminator statement js"><span>;</span></span></span></div><div class="line"><span class="source js"><span class="variable other object js"><span>pdf</span></span><span class="meta js"><span class="meta delimiter method period js"><span>.</span></span><span class="entity name function js"><span>create</span></span><span class="meta js"><span class="punctuation definition begin round js"><span>(</span></span><span>html</span><span class="punctuation definition end round js"><span>)</span></span></span><span class="meta delimiter method period js"><span>.</span></span><span class="entity name function js"><span>toFile</span></span><span class="meta js"><span class="punctuation definition begin round js"><span>(</span></span><span class="meta brace square js"><span>[</span></span><span>filepath</span><span class="meta delimiter object comma js"><span>,</span></span><span>&nbsp;</span><span class="meta brace square js"><span>]</span></span><span class="meta function js"><span class="storage type function js"><span>function</span></span><span class="meta js"><span class="punctuation definition begin round js"><span>(</span></span><span class="variable function js"><span>err</span></span><span class="meta delimiter object comma js"><span>,</span></span><span>&nbsp;</span><span class="variable function js"><span>res</span></span><span class="punctuation definition end round js"><span>)</span></span></span></span><span class="punctuation definition function begin curly js"><span>{</span></span></span></span></span></div><div class="line"><span class="source js"><span class="meta js"><span class="meta js"><span>&nbsp;&nbsp;</span><span class="entity name type object console js"><span>console</span></span><span class="meta js"><span class="meta delimiter method period js"><span>.</span></span><span class="support function console js"><span>log</span></span><span class="meta js"><span class="punctuation definition begin round js"><span>(</span></span><span class="variable other object js"><span>res</span></span><span class="meta delimiter period js"><span>.</span></span><span class="support constant js"><span>filename</span></span><span class="punctuation definition end round js"><span>)</span></span></span></span><span class="punctuation terminator statement js"><span>;</span></span></span></span></span></div><div class="line"><span class="source js"><span class="meta js"><span class="meta js"><span class="punctuation definition function end curly js"><span>}</span></span><span class="punctuation definition end round js"><span>)</span></span></span></span><span class="punctuation terminator statement js"><span>;</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;</span></span></div><div class="line"><span class="source js"><span class="variable other object js"><span>pdf</span></span><span class="meta js"><span class="meta delimiter method period js"><span>.</span></span><span class="entity name function js"><span>create</span></span><span class="meta js"><span class="punctuation definition begin round js"><span>(</span></span><span>html</span><span class="punctuation definition end round js"><span>)</span></span></span><span class="meta delimiter method period js"><span>.</span></span><span class="entity name function js"><span>toStream</span></span><span class="meta js"><span class="punctuation definition begin round js"><span>(</span></span><span class="meta function js"><span class="storage type function js"><span>function</span></span><span class="meta js"><span class="punctuation definition begin round js"><span>(</span></span><span class="variable function js"><span>err</span></span><span class="meta delimiter object comma js"><span>,</span></span><span>&nbsp;</span><span class="variable function js"><span>stream</span></span><span class="punctuation definition end round js"><span>)</span></span></span></span><span class="punctuation definition function begin curly js"><span>{</span></span></span></span></span></div><div class="line"><span class="source js"><span class="meta js"><span class="meta js"><span>&nbsp;&nbsp;</span><span class="variable other object js"><span>stream</span></span><span class="meta js"><span class="meta delimiter method period js"><span>.</span></span><span class="entity name function js"><span>pipe</span></span><span class="meta js"><span class="punctuation definition begin round js"><span>(</span></span><span class="variable other object js"><span>fs</span></span><span class="meta js"><span class="meta delimiter method period js"><span>.</span></span><span class="entity name function js"><span>createWriteStream</span></span><span class="meta js"><span class="punctuation definition begin round js"><span>(</span></span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>'</span></span><span>./foo.pdf</span><span class="punctuation definition string end js"><span>'</span></span></span><span class="punctuation definition end round js"><span>)</span></span></span></span><span class="punctuation definition end round js"><span>)</span></span></span></span><span class="punctuation terminator statement js"><span>;</span></span></span></span></span></div><div class="line"><span class="source js"><span class="meta js"><span class="meta js"><span class="punctuation definition function end curly js"><span>}</span></span><span class="punctuation definition end round js"><span>)</span></span></span></span><span class="punctuation terminator statement js"><span>;</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;</span></span></div><div class="line"><span class="source js"><span class="variable other object js"><span>pdf</span></span><span class="meta js"><span class="meta delimiter method period js"><span>.</span></span><span class="entity name function js"><span>create</span></span><span class="meta js"><span class="punctuation definition begin round js"><span>(</span></span><span>html</span><span class="punctuation definition end round js"><span>)</span></span></span><span class="meta delimiter method period js"><span>.</span></span><span class="entity name function js"><span>toBuffer</span></span><span class="meta js"><span class="punctuation definition begin round js"><span>(</span></span><span class="meta function js"><span class="storage type function js"><span>function</span></span><span class="meta js"><span class="punctuation definition begin round js"><span>(</span></span><span class="variable function js"><span>err</span></span><span class="meta delimiter object comma js"><span>,</span></span><span>&nbsp;</span><span class="variable function js"><span>buffer</span></span><span class="punctuation definition end round js"><span>)</span></span></span></span><span class="punctuation definition function begin curly js"><span>{</span></span></span></span></span></div><div class="line"><span class="source js"><span class="meta js"><span class="meta js"><span>&nbsp;&nbsp;</span><span class="entity name type object console js"><span>console</span></span><span class="meta js"><span class="meta delimiter method period js"><span>.</span></span><span class="support function console js"><span>log</span></span><span class="meta js"><span class="punctuation definition begin round js"><span>(</span></span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>'</span></span><span>This&nbsp;is&nbsp;a&nbsp;buffer:</span><span class="punctuation definition string end js"><span>'</span></span></span><span class="meta delimiter object comma js"><span>,</span></span><span>&nbsp;</span><span class="variable other object js"><span>Buffer</span></span><span class="meta js"><span class="meta delimiter method period js"><span>.</span></span><span class="entity name function js"><span>isBuffer</span></span><span class="meta js"><span class="punctuation definition begin round js"><span>(</span></span><span>buffer</span><span class="punctuation definition end round js"><span>)</span></span></span></span><span class="punctuation definition end round js"><span>)</span></span></span></span><span class="punctuation terminator statement js"><span>;</span></span></span></span></span></div><div class="line"><span class="source js"><span class="meta js"><span class="meta js"><span class="punctuation definition function end curly js"><span>}</span></span><span class="punctuation definition end round js"><span>)</span></span></span></span><span class="punctuation terminator statement js"><span>;</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;</span></span></div><div class="line"><span class="source js"><span>&nbsp;</span></span></div><div class="line"><span class="source js"><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>//</span></span><span>&nbsp;for&nbsp;backwards&nbsp;compatibility</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source js"><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>//</span></span><span>&nbsp;alias&nbsp;to&nbsp;pdf.create(html[,&nbsp;options]).toBuffer(callback)</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source js"><span class="variable other object js"><span>pdf</span></span><span class="meta js"><span class="meta delimiter method period js"><span>.</span></span><span class="entity name function js"><span>create</span></span><span class="meta js"><span class="punctuation definition begin round js"><span>(</span></span><span>html&nbsp;</span><span class="meta brace square js"><span>[</span></span><span class="meta delimiter object comma js"><span>,</span></span><span>&nbsp;options</span><span class="meta brace square js"><span>]</span></span><span class="meta delimiter object comma js"><span>,</span></span><span>&nbsp;</span><span class="meta function js"><span class="storage type function js"><span>function</span></span><span class="meta js"><span class="punctuation definition begin round js"><span>(</span></span><span class="variable function js"><span>err</span></span><span class="meta delimiter object comma js"><span>,</span></span><span>&nbsp;</span><span class="variable function js"><span>buffer</span></span><span class="punctuation definition end round js"><span>)</span></span></span></span><span class="punctuation definition function begin curly js"><span>{</span></span><span class="punctuation definition function end curly js"><span>}</span></span><span class="punctuation definition end round js"><span>)</span></span></span></span><span class="punctuation terminator statement js"><span>;</span></span></span></div></pre></div>
+<h3><a id="user-content-footers-and-headers" class="deep-link" href="https://www.npmjs.com/package/html-pdf#footers-and-headers"><svg aria-hidden="true" class="deep-link-icon" height="16" version="1.1" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Footers and Headers</h3>
+<p><code>html-pdf</code> can read the header or footer either out of the <code>footer</code> and <code>header</code> config object or out of the html source. You can either set a default header &amp; footer or overwrite that by appending a page number (1 based index) to the <code>id="pageHeader"</code> attribute of a html tag.</p>
+<p>You can use any combination of those tags. The library tries to find any element, that contains the <code>pageHeader</code> or <code>pageFooter</code> id prefix.</p>
+<div class="highlight"><pre class="editor editor-colors"><div class="line"><span class="text html"><span class="meta tag block any html"><span class="punctuation definition tag begin html"><span>&lt;</span></span><span class="entity name tag block any html"><span>div</span></span><span>&nbsp;</span><span class="meta id html"><span class="entity other attribute-name id html"><span>id</span></span><span class="punctuation separator key-value html"><span>=</span></span><span class="string quoted double html"><span class="punctuation definition string begin html"><span>"</span></span><span class="meta toc-list id html"><span>pageHeader</span></span><span class="punctuation definition string end html"><span>"</span></span></span></span><span class="punctuation definition tag end html"><span>&gt;</span></span></span><span>Default&nbsp;header</span><span class="meta tag block any html"><span class="punctuation definition tag begin html"><span>&lt;/</span></span><span class="entity name tag block any html"><span>div</span></span><span class="punctuation definition tag end html"><span>&gt;</span></span></span></span></div><div class="line"><span class="text html"><span class="meta tag block any html"><span class="punctuation definition tag begin html"><span>&lt;</span></span><span class="entity name tag block any html"><span>div</span></span><span>&nbsp;</span><span class="meta id html"><span class="entity other attribute-name id html"><span>id</span></span><span class="punctuation separator key-value html"><span>=</span></span><span class="string quoted double html"><span class="punctuation definition string begin html"><span>"</span></span><span class="meta toc-list id html"><span>pageHeader-first</span></span><span class="punctuation definition string end html"><span>"</span></span></span></span><span class="punctuation definition tag end html"><span>&gt;</span></span></span><span>Header&nbsp;on&nbsp;first&nbsp;page</span><span class="meta tag block any html"><span class="punctuation definition tag begin html"><span>&lt;/</span></span><span class="entity name tag block any html"><span>div</span></span><span class="punctuation definition tag end html"><span>&gt;</span></span></span></span></div><div class="line"><span class="text html"><span class="meta tag block any html"><span class="punctuation definition tag begin html"><span>&lt;</span></span><span class="entity name tag block any html"><span>div</span></span><span>&nbsp;</span><span class="meta id html"><span class="entity other attribute-name id html"><span>id</span></span><span class="punctuation separator key-value html"><span>=</span></span><span class="string quoted double html"><span class="punctuation definition string begin html"><span>"</span></span><span class="meta toc-list id html"><span>pageHeader-2</span></span><span class="punctuation definition string end html"><span>"</span></span></span></span><span class="punctuation definition tag end html"><span>&gt;</span></span></span><span>Header&nbsp;on&nbsp;second&nbsp;page</span><span class="meta tag block any html"><span class="punctuation definition tag begin html"><span>&lt;/</span></span><span class="entity name tag block any html"><span>div</span></span><span class="punctuation definition tag end html"><span>&gt;</span></span></span></span></div><div class="line"><span class="text html"><span class="meta tag block any html"><span class="punctuation definition tag begin html"><span>&lt;</span></span><span class="entity name tag block any html"><span>div</span></span><span>&nbsp;</span><span class="meta id html"><span class="entity other attribute-name id html"><span>id</span></span><span class="punctuation separator key-value html"><span>=</span></span><span class="string quoted double html"><span class="punctuation definition string begin html"><span>"</span></span><span class="meta toc-list id html"><span>pageHeader-3</span></span><span class="punctuation definition string end html"><span>"</span></span></span></span><span class="punctuation definition tag end html"><span>&gt;</span></span></span><span>Header&nbsp;on&nbsp;third&nbsp;page</span><span class="meta tag block any html"><span class="punctuation definition tag begin html"><span>&lt;/</span></span><span class="entity name tag block any html"><span>div</span></span><span class="punctuation definition tag end html"><span>&gt;</span></span></span></span></div><div class="line"><span class="text html"><span class="meta tag block any html"><span class="punctuation definition tag begin html"><span>&lt;</span></span><span class="entity name tag block any html"><span>div</span></span><span>&nbsp;</span><span class="meta id html"><span class="entity other attribute-name id html"><span>id</span></span><span class="punctuation separator key-value html"><span>=</span></span><span class="string quoted double html"><span class="punctuation definition string begin html"><span>"</span></span><span class="meta toc-list id html"><span>pageHeader-last</span></span><span class="punctuation definition string end html"><span>"</span></span></span></span><span class="punctuation definition tag end html"><span>&gt;</span></span></span><span>Header&nbsp;on&nbsp;last&nbsp;page</span><span class="meta tag block any html"><span class="punctuation definition tag begin html"><span>&lt;/</span></span><span class="entity name tag block any html"><span>div</span></span><span class="punctuation definition tag end html"><span>&gt;</span></span></span></span></div><div class="line"><span class="text html"><span>...</span></span></div><div class="line"><span class="text html"><span class="meta tag block any html"><span class="punctuation definition tag begin html"><span>&lt;</span></span><span class="entity name tag block any html"><span>div</span></span><span>&nbsp;</span><span class="meta id html"><span class="entity other attribute-name id html"><span>id</span></span><span class="punctuation separator key-value html"><span>=</span></span><span class="string quoted double html"><span class="punctuation definition string begin html"><span>"</span></span><span class="meta toc-list id html"><span>pageFooter</span></span><span class="punctuation definition string end html"><span>"</span></span></span></span><span class="punctuation definition tag end html"><span>&gt;</span></span></span><span>Default&nbsp;footer</span><span class="meta tag block any html"><span class="punctuation definition tag begin html"><span>&lt;/</span></span><span class="entity name tag block any html"><span>div</span></span><span class="punctuation definition tag end html"><span>&gt;</span></span></span></span></div><div class="line"><span class="text html"><span class="meta tag block any html"><span class="punctuation definition tag begin html"><span>&lt;</span></span><span class="entity name tag block any html"><span>div</span></span><span>&nbsp;</span><span class="meta id html"><span class="entity other attribute-name id html"><span>id</span></span><span class="punctuation separator key-value html"><span>=</span></span><span class="string quoted double html"><span class="punctuation definition string begin html"><span>"</span></span><span class="meta toc-list id html"><span>pageFooter-first</span></span><span class="punctuation definition string end html"><span>"</span></span></span></span><span class="punctuation definition tag end html"><span>&gt;</span></span></span><span>Footer&nbsp;on&nbsp;first&nbsp;page</span><span class="meta tag block any html"><span class="punctuation definition tag begin html"><span>&lt;/</span></span><span class="entity name tag block any html"><span>div</span></span><span class="punctuation definition tag end html"><span>&gt;</span></span></span></span></div><div class="line"><span class="text html"><span class="meta tag block any html"><span class="punctuation definition tag begin html"><span>&lt;</span></span><span class="entity name tag block any html"><span>div</span></span><span>&nbsp;</span><span class="meta id html"><span class="entity other attribute-name id html"><span>id</span></span><span class="punctuation separator key-value html"><span>=</span></span><span class="string quoted double html"><span class="punctuation definition string begin html"><span>"</span></span><span class="meta toc-list id html"><span>pageFooter-2</span></span><span class="punctuation definition string end html"><span>"</span></span></span></span><span class="punctuation definition tag end html"><span>&gt;</span></span></span><span>Footer&nbsp;on&nbsp;second&nbsp;page</span><span class="meta tag block any html"><span class="punctuation definition tag begin html"><span>&lt;/</span></span><span class="entity name tag block any html"><span>div</span></span><span class="punctuation definition tag end html"><span>&gt;</span></span></span></span></div><div class="line"><span class="text html"><span class="meta tag block any html"><span class="punctuation definition tag begin html"><span>&lt;</span></span><span class="entity name tag block any html"><span>div</span></span><span>&nbsp;</span><span class="meta id html"><span class="entity other attribute-name id html"><span>id</span></span><span class="punctuation separator key-value html"><span>=</span></span><span class="string quoted double html"><span class="punctuation definition string begin html"><span>"</span></span><span class="meta toc-list id html"><span>pageFooter-last</span></span><span class="punctuation definition string end html"><span>"</span></span></span></span><span class="punctuation definition tag end html"><span>&gt;</span></span></span><span>Footer&nbsp;on&nbsp;last&nbsp;page</span><span class="meta tag block any html"><span class="punctuation definition tag begin html"><span>&lt;/</span></span><span class="entity name tag block any html"><span>div</span></span><span class="punctuation definition tag end html"><span>&gt;</span></span></span></span></div></pre></div>
+<h2><a id="user-content-options" class="deep-link" href="https://www.npmjs.com/package/html-pdf#options"><svg aria-hidden="true" class="deep-link-icon" height="16" version="1.1" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Options</h2>
+<div class="highlight javascript"><pre class="editor editor-colors"><div class="line"><span class="source js"><span>config&nbsp;</span><span class="keyword operator assignment js"><span>=</span></span><span>&nbsp;</span><span class="meta brace curly js"><span>{</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;</span></span></div><div class="line"><span class="source js"><span class="punctuation comment js"><span>&nbsp;&nbsp;</span></span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>//</span></span><span>&nbsp;Export&nbsp;options</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;</span><span class="string quoted double js"><span class="punctuation definition string begin js"><span>"</span></span><span>directory</span><span class="punctuation definition string end js"><span>"</span></span></span><span class="keyword operator js"><span>:</span></span><span>&nbsp;</span><span class="string quoted double js"><span class="punctuation definition string begin js"><span>"</span></span><span>/tmp</span><span class="punctuation definition string end js"><span>"</span></span></span><span class="meta delimiter object comma js"><span>,</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>//</span></span><span>&nbsp;The&nbsp;directory&nbsp;the&nbsp;file&nbsp;gets&nbsp;written&nbsp;into&nbsp;if&nbsp;not&nbsp;using&nbsp;.toFile(filename,&nbsp;callback).&nbsp;default:&nbsp;'/tmp'</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;</span></span></div><div class="line"><span class="source js"><span class="punctuation comment js"><span>&nbsp;&nbsp;</span></span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>//</span></span><span>&nbsp;Papersize&nbsp;Options:&nbsp;</span><span class="markup underline link hyperlink"><span>http://phantomjs.org/api/webpage/property/paper-size.html</span></span><span>&nbsp;</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;</span><span class="string quoted double js"><span class="punctuation definition string begin js"><span>"</span></span><span>height</span><span class="punctuation definition string end js"><span>"</span></span></span><span class="keyword operator js"><span>:</span></span><span>&nbsp;</span><span class="string quoted double js"><span class="punctuation definition string begin js"><span>"</span></span><span>10.5in</span><span class="punctuation definition string end js"><span>"</span></span></span><span class="meta delimiter object comma js"><span>,</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>//</span></span><span>&nbsp;allowed&nbsp;units:&nbsp;mm,&nbsp;cm,&nbsp;in,&nbsp;px</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;</span><span class="string quoted double js"><span class="punctuation definition string begin js"><span>"</span></span><span>width</span><span class="punctuation definition string end js"><span>"</span></span></span><span class="keyword operator js"><span>:</span></span><span>&nbsp;</span><span class="string quoted double js"><span class="punctuation definition string begin js"><span>"</span></span><span>8in</span><span class="punctuation definition string end js"><span>"</span></span></span><span class="meta delimiter object comma js"><span>,</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>//</span></span><span>&nbsp;allowed&nbsp;units:&nbsp;mm,&nbsp;cm,&nbsp;in,&nbsp;px</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;</span><span class="keyword operator js"><span>-</span></span><span>&nbsp;or&nbsp;</span><span class="keyword operator js"><span>-</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;</span><span class="string quoted double js"><span class="punctuation definition string begin js"><span>"</span></span><span>format</span><span class="punctuation definition string end js"><span>"</span></span></span><span class="keyword operator js"><span>:</span></span><span>&nbsp;</span><span class="string quoted double js"><span class="punctuation definition string begin js"><span>"</span></span><span>Letter</span><span class="punctuation definition string end js"><span>"</span></span></span><span class="meta delimiter object comma js"><span>,</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>//</span></span><span>&nbsp;allowed&nbsp;units:&nbsp;A3,&nbsp;A4,&nbsp;A5,&nbsp;Legal,&nbsp;Letter,&nbsp;Tabloid</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;</span><span class="string quoted double js"><span class="punctuation definition string begin js"><span>"</span></span><span>orientation</span><span class="punctuation definition string end js"><span>"</span></span></span><span class="keyword operator js"><span>:</span></span><span>&nbsp;</span><span class="string quoted double js"><span class="punctuation definition string begin js"><span>"</span></span><span>portrait</span><span class="punctuation definition string end js"><span>"</span></span></span><span class="meta delimiter object comma js"><span>,</span></span><span>&nbsp;</span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>//</span></span><span>&nbsp;portrait&nbsp;or&nbsp;landscape</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;</span></span></div><div class="line"><span class="source js"><span class="punctuation comment js"><span>&nbsp;&nbsp;</span></span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>//</span></span><span>&nbsp;Page&nbsp;options</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;</span><span class="string quoted double js"><span class="punctuation definition string begin js"><span>"</span></span><span>border</span><span class="punctuation definition string end js"><span>"</span></span></span><span class="keyword operator js"><span>:</span></span><span>&nbsp;</span><span class="string quoted double js"><span class="punctuation definition string begin js"><span>"</span></span><span>0</span><span class="punctuation definition string end js"><span>"</span></span></span><span class="meta delimiter object comma js"><span>,</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>//</span></span><span>&nbsp;default&nbsp;is&nbsp;0,&nbsp;units:&nbsp;mm,&nbsp;cm,&nbsp;in,&nbsp;px</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;</span><span class="keyword operator js"><span>-</span></span><span>&nbsp;or&nbsp;</span><span class="keyword operator js"><span>-</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;</span><span class="string quoted double js"><span class="punctuation definition string begin js"><span>"</span></span><span>border</span><span class="punctuation definition string end js"><span>"</span></span></span><span class="keyword operator js"><span>:</span></span><span>&nbsp;</span><span class="meta brace curly js"><span>{</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="string quoted double js"><span class="punctuation definition string begin js"><span>"</span></span><span>top</span><span class="punctuation definition string end js"><span>"</span></span></span><span class="keyword operator js"><span>:</span></span><span>&nbsp;</span><span class="string quoted double js"><span class="punctuation definition string begin js"><span>"</span></span><span>2in</span><span class="punctuation definition string end js"><span>"</span></span></span><span class="meta delimiter object comma js"><span>,</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>//</span></span><span>&nbsp;default&nbsp;is&nbsp;0,&nbsp;units:&nbsp;mm,&nbsp;cm,&nbsp;in,&nbsp;px</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="string quoted double js"><span class="punctuation definition string begin js"><span>"</span></span><span>right</span><span class="punctuation definition string end js"><span>"</span></span></span><span class="keyword operator js"><span>:</span></span><span>&nbsp;</span><span class="string quoted double js"><span class="punctuation definition string begin js"><span>"</span></span><span>1in</span><span class="punctuation definition string end js"><span>"</span></span></span><span class="meta delimiter object comma js"><span>,</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="string quoted double js"><span class="punctuation definition string begin js"><span>"</span></span><span>bottom</span><span class="punctuation definition string end js"><span>"</span></span></span><span class="keyword operator js"><span>:</span></span><span>&nbsp;</span><span class="string quoted double js"><span class="punctuation definition string begin js"><span>"</span></span><span>2in</span><span class="punctuation definition string end js"><span>"</span></span></span><span class="meta delimiter object comma js"><span>,</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="string quoted double js"><span class="punctuation definition string begin js"><span>"</span></span><span>left</span><span class="punctuation definition string end js"><span>"</span></span></span><span class="keyword operator js"><span>:</span></span><span>&nbsp;</span><span class="string quoted double js"><span class="punctuation definition string begin js"><span>"</span></span><span>1.5in</span><span class="punctuation definition string end js"><span>"</span></span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;</span><span class="meta brace curly js"><span>}</span></span><span class="meta delimiter object comma js"><span>,</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;</span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;</span><span class="string quoted double js"><span class="punctuation definition string begin js"><span>"</span></span><span>header</span><span class="punctuation definition string end js"><span>"</span></span></span><span class="keyword operator js"><span>:</span></span><span>&nbsp;</span><span class="meta brace curly js"><span>{</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="string quoted double js"><span class="punctuation definition string begin js"><span>"</span></span><span>height</span><span class="punctuation definition string end js"><span>"</span></span></span><span class="keyword operator js"><span>:</span></span><span>&nbsp;</span><span class="string quoted double js"><span class="punctuation definition string begin js"><span>"</span></span><span>45mm</span><span class="punctuation definition string end js"><span>"</span></span></span><span class="meta delimiter object comma js"><span>,</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="string quoted double js"><span class="punctuation definition string begin js"><span>"</span></span><span>contents</span><span class="punctuation definition string end js"><span>"</span></span></span><span class="keyword operator js"><span>:</span></span><span>&nbsp;</span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>'</span></span><span>&lt;div&nbsp;style="text-align:&nbsp;center;"&gt;Author:&nbsp;Marc&nbsp;Bachmann&lt;/div&gt;</span><span class="punctuation definition string end js"><span>'</span></span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;</span><span class="meta brace curly js"><span>}</span></span><span class="meta delimiter object comma js"><span>,</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;</span><span class="string quoted double js"><span class="punctuation definition string begin js"><span>"</span></span><span>footer</span><span class="punctuation definition string end js"><span>"</span></span></span><span class="keyword operator js"><span>:</span></span><span>&nbsp;</span><span class="meta brace curly js"><span>{</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="string quoted double js"><span class="punctuation definition string begin js"><span>"</span></span><span>height</span><span class="punctuation definition string end js"><span>"</span></span></span><span class="keyword operator js"><span>:</span></span><span>&nbsp;</span><span class="string quoted double js"><span class="punctuation definition string begin js"><span>"</span></span><span>28mm</span><span class="punctuation definition string end js"><span>"</span></span></span><span class="meta delimiter object comma js"><span>,</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="string quoted double js"><span class="punctuation definition string begin js"><span>"</span></span><span>contents</span><span class="punctuation definition string end js"><span>"</span></span></span><span class="keyword operator js"><span>:</span></span><span>&nbsp;</span><span class="meta brace curly js"><span>{</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;first</span><span class="keyword operator js"><span>:</span></span><span>&nbsp;</span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>'</span></span><span>Cover&nbsp;page</span><span class="punctuation definition string end js"><span>'</span></span></span><span class="meta delimiter object comma js"><span>,</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="constant numeric decimal js"><span>2</span></span><span class="keyword operator js"><span>:</span></span><span>&nbsp;</span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>'</span></span><span>Second&nbsp;page</span><span class="punctuation definition string end js"><span>'</span></span></span><span>&nbsp;</span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>//</span></span><span>&nbsp;Any&nbsp;page&nbsp;number&nbsp;is&nbsp;working.&nbsp;1-based&nbsp;index</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="keyword control js"><span>default</span></span><span class="keyword operator js"><span>:</span></span><span>&nbsp;</span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>'</span></span><span>&lt;span&nbsp;style="color:&nbsp;#444;"&gt;{{page}}&lt;/span&gt;/&lt;span&gt;{{pages}}&lt;/span&gt;</span><span class="punctuation definition string end js"><span>'</span></span></span><span class="meta delimiter object comma js"><span>,</span></span><span>&nbsp;</span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>//</span></span><span>&nbsp;fallback&nbsp;value</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;last</span><span class="keyword operator js"><span>:</span></span><span>&nbsp;</span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>'</span></span><span>Last&nbsp;Page</span><span class="punctuation definition string end js"><span>'</span></span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta brace curly js"><span>}</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;</span><span class="meta brace curly js"><span>}</span></span><span class="meta delimiter object comma js"><span>,</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;</span></span></div><div class="line"><span class="source js"><span>&nbsp;</span></span></div><div class="line"><span class="source js"><span class="punctuation comment js"><span>&nbsp;&nbsp;</span></span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>//</span></span><span>&nbsp;Rendering&nbsp;options</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;</span><span class="string quoted double js"><span class="punctuation definition string begin js"><span>"</span></span><span>base</span><span class="punctuation definition string end js"><span>"</span></span></span><span class="keyword operator js"><span>:</span></span><span>&nbsp;</span><span class="string quoted double js"><span class="punctuation definition string begin js"><span>"</span></span><span class="markup underline link hyperlink"><span>file:///home/www/your-asset-path</span></span><span class="punctuation definition string end js"><span>"</span></span></span><span class="meta delimiter object comma js"><span>,</span></span><span>&nbsp;</span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>//</span></span><span>&nbsp;Base&nbsp;path&nbsp;that's&nbsp;used&nbsp;to&nbsp;load&nbsp;files&nbsp;(images,&nbsp;css,&nbsp;js)&nbsp;when&nbsp;they&nbsp;aren't&nbsp;referenced&nbsp;using&nbsp;a&nbsp;host</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;</span></span></div><div class="line"><span class="source js"><span class="punctuation comment js"><span>&nbsp;&nbsp;</span></span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>//</span></span><span>&nbsp;Zooming&nbsp;option,&nbsp;can&nbsp;be&nbsp;used&nbsp;to&nbsp;scale&nbsp;images&nbsp;if&nbsp;`options.type`&nbsp;is&nbsp;not&nbsp;pdf</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;</span><span class="string quoted double js"><span class="punctuation definition string begin js"><span>"</span></span><span>zoomFactor</span><span class="punctuation definition string end js"><span>"</span></span></span><span class="keyword operator js"><span>:</span></span><span>&nbsp;</span><span class="string quoted double js"><span class="punctuation definition string begin js"><span>"</span></span><span>1</span><span class="punctuation definition string end js"><span>"</span></span></span><span class="meta delimiter object comma js"><span>,</span></span><span>&nbsp;</span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>//</span></span><span>&nbsp;default&nbsp;is&nbsp;1</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;</span></span></div><div class="line"><span class="source js"><span class="punctuation comment js"><span>&nbsp;&nbsp;</span></span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>//</span></span><span>&nbsp;File&nbsp;options</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;</span><span class="string quoted double js"><span class="punctuation definition string begin js"><span>"</span></span><span>type</span><span class="punctuation definition string end js"><span>"</span></span></span><span class="keyword operator js"><span>:</span></span><span>&nbsp;</span><span class="string quoted double js"><span class="punctuation definition string begin js"><span>"</span></span><span>pdf</span><span class="punctuation definition string end js"><span>"</span></span></span><span class="meta delimiter object comma js"><span>,</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>//</span></span><span>&nbsp;allowed&nbsp;file&nbsp;types:&nbsp;png,&nbsp;jpeg,&nbsp;pdf</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;</span><span class="string quoted double js"><span class="punctuation definition string begin js"><span>"</span></span><span>quality</span><span class="punctuation definition string end js"><span>"</span></span></span><span class="keyword operator js"><span>:</span></span><span>&nbsp;</span><span class="string quoted double js"><span class="punctuation definition string begin js"><span>"</span></span><span>75</span><span class="punctuation definition string end js"><span>"</span></span></span><span class="meta delimiter object comma js"><span>,</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>//</span></span><span>&nbsp;only&nbsp;used&nbsp;for&nbsp;types&nbsp;png&nbsp;&amp;&nbsp;jpeg</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;</span></span></div><div class="line"><span class="source js"><span class="punctuation comment js"><span>&nbsp;&nbsp;</span></span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>//</span></span><span>&nbsp;Script&nbsp;options</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;</span><span class="string quoted double js"><span class="punctuation definition string begin js"><span>"</span></span><span>phantomPath</span><span class="punctuation definition string end js"><span>"</span></span></span><span class="keyword operator js"><span>:</span></span><span>&nbsp;</span><span class="string quoted double js"><span class="punctuation definition string begin js"><span>"</span></span><span>./node_modules/phantomjs/bin/phantomjs</span><span class="punctuation definition string end js"><span>"</span></span></span><span class="meta delimiter object comma js"><span>,</span></span><span>&nbsp;</span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>//</span></span><span>&nbsp;PhantomJS&nbsp;binary&nbsp;which&nbsp;should&nbsp;get&nbsp;downloaded&nbsp;automatically</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;</span><span class="string quoted double js"><span class="punctuation definition string begin js"><span>"</span></span><span>phantomArgs</span><span class="punctuation definition string end js"><span>"</span></span></span><span class="keyword operator js"><span>:</span></span><span>&nbsp;</span><span class="meta brace square js"><span>[</span><span>]</span></span><span class="meta delimiter object comma js"><span>,</span></span><span>&nbsp;</span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>//</span></span><span>&nbsp;array&nbsp;of&nbsp;strings&nbsp;used&nbsp;as&nbsp;phantomjs&nbsp;args&nbsp;e.g.&nbsp;["--ignore-ssl-errors=yes"]</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;</span><span class="string quoted double js"><span class="punctuation definition string begin js"><span>"</span></span><span>script</span><span class="punctuation definition string end js"><span>"</span></span></span><span class="keyword operator js"><span>:</span></span><span>&nbsp;</span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>'</span></span><span>/url</span><span class="punctuation definition string end js"><span>'</span></span></span><span class="meta delimiter object comma js"><span>,</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>//</span></span><span>&nbsp;Absolute&nbsp;path&nbsp;to&nbsp;a&nbsp;custom&nbsp;phantomjs&nbsp;script,&nbsp;use&nbsp;the&nbsp;file&nbsp;in&nbsp;lib/scripts&nbsp;as&nbsp;example</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;</span><span class="string quoted double js"><span class="punctuation definition string begin js"><span>"</span></span><span>timeout</span><span class="punctuation definition string end js"><span>"</span></span></span><span class="keyword operator js"><span>:</span></span><span>&nbsp;</span><span class="constant numeric decimal js"><span>30000</span></span><span class="meta delimiter object comma js"><span>,</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>//</span></span><span>&nbsp;Timeout&nbsp;that&nbsp;will&nbsp;cancel&nbsp;phantomjs,&nbsp;in&nbsp;milliseconds</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;</span></span></div><div class="line"><span class="source js"><span class="punctuation comment js"><span>&nbsp;&nbsp;</span></span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>//</span></span><span>&nbsp;HTTP&nbsp;Headers&nbsp;that&nbsp;are&nbsp;used&nbsp;for&nbsp;requests</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;</span><span class="string quoted double js"><span class="punctuation definition string begin js"><span>"</span></span><span>httpHeaders</span><span class="punctuation definition string end js"><span>"</span></span></span><span class="keyword operator js"><span>:</span></span><span>&nbsp;</span><span class="meta brace curly js"><span>{</span></span></span></div><div class="line"><span class="source js"><span class="punctuation comment js"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>//</span></span><span>&nbsp;e.g.</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="string quoted double js"><span class="punctuation definition string begin js"><span>"</span></span><span>Authorization</span><span class="punctuation definition string end js"><span>"</span></span></span><span class="keyword operator js"><span>:</span></span><span>&nbsp;</span><span class="string quoted double js"><span class="punctuation definition string begin js"><span>"</span></span><span>Bearer&nbsp;ACEFAD8C-4B4D-4042-AB30-6C735F5BAC8B</span><span class="punctuation definition string end js"><span>"</span></span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;</span><span class="meta brace curly js"><span>}</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;</span></span></div><div class="line"><span class="source js"><span class="meta brace curly js"><span>}</span></span></span></div></pre></div>
+<p>The full options object gets converted to JSON and will get passed to the phantomjs script as third argument.<br>
+There are more options concerning the paperSize, header &amp; footer options inside the phantomjs script.</p>
+
+  </div>
+
+</div>
+
+<div class="sidebar">
+
+    <div class="promotion" data-promotion-id="725" data-promotion-spot="packagePage"><div class="marketing">
+<h3 id="marketing-texthed"><a href="https://www.npmjs.com/features?utm_source=house&amp;utm_medium=package%20page&amp;utm_term=Unleash%20awesomeness&amp;utm_content=hed&amp;utm_campaign=orgs#features-plans-and-enterprise-pane" title="Private Packages and Organizations">Unleash awesomeness</a></h3>
+
+<p>Private packages, team management tools, and powerful integrations. <a style="white-space: normal;" href="https://www.npmjs.com/features?utm_source=house&amp;utm_medium=package%20page&amp;utm_term=unleash%20awesomeness&amp;utm_content=body&amp;utm_campaign=orgs#features-plans-and-enterprise-pane" title="Private Packages and Organizations">Get started with npm Orgs</a></p></div></div>
+
+    <div class="autoselect-wrapper npm-install icon-download">
+      <input type="text" value="npm install html-pdf" readonly="">
+      <p><a href="https://www.npmjs.com/package/html-pdf/tutorial">how? learn more</a></p>
+    </div>
+
+  <ul class="box">
+
+      <li class="last-publisher">
+          <a href="https://www.npmjs.com/~marcbachmann">
+            <img src="./html-pdf_files/66ef6167c0caf0f4a0759735340c93fd" alt="marcbachmann">
+            <span>marcbachmann</span>
+          </a>
+          published
+          <span data-date="2016-08-17T21:19:32.691Z" data-date-format="relative">6 months ago</span>
+      </li>
+
+    <li>
+      <strong>2.1.0</strong>
+      is the latest
+        of 20 releases
+    </li>
+
+      <li>
+        <a href="https://github.com/marcbachmann/node-html-pdf">github.com/marcbachmann/node-html-pdf</a>
+      </li>
+
+
+      <li>
+          <a href="http://spdx.org/licenses/MIT">MIT</a>
+          <img class="osi" alt="Licensed on OSI-approved terms" src="./html-pdf_files/osi.svg">®
+      </li>
+
+  </ul>
+
+    <h3 title="collaborators">
+      Collaborators
+      <small><a href="https://www.npmjs.com/package/html-pdf/access">list</a></small>
+    </h3>
+
+    <ul class="humans collaborators">
+        <li>
+            <a href="https://www.npmjs.com/~marcbachmann" rel="tipsy" original-title="marcbachmann">
+                <img src="./html-pdf_files/66ef6167c0caf0f4a0759735340c93fd" alt="marcbachmann">
+            </a>
+        </li>
+
+
+    </ul>
+
+    <h3>Stats</h3>
+    <ul class="box">
+
+        <li>
+          <strong class="pretty-number daily-downloads">2,197</strong>
+          downloads in the last day
+        </li>
+        <li>
+          <strong class="pretty-number weekly-downloads">12,137</strong>
+          downloads in the last week
+        </li>
+        <li>
+          <strong class="pretty-number monthly-downloads">58,616</strong>
+          downloads in the last month
+        </li>
+
+        <li id="issues" data-ghapi="https://api.github.com/repos/marcbachmann/node-html-pdf">
+          <span class="original" style="display: none;">Have an issue? <a href="https://github.com/marcbachmann/node-html-pdf/issues">123 open issues</a></span>
+            <span class="enhanced" style="">
+              <a href="https://github.com/marcbachmann/node-html-pdf/issues">123 open issues</a> on GitHub
+            </span>
+        </li>
+
+        <li id="pull_requests" style="">
+          <a href="https://github.com/marcbachmann/node-html-pdf/pulls">11 open pull requests</a> on GitHub
+        </li>
+
+    </ul>
+
+        <h3>Try it out</h3>
+        <ul class="box">
+          <li class="runkit"><a href="https://runkit.com/npm/html-pdf" target="_blank">Test html-pdf in your browser.</a></li>
+        </ul>
+
+
+  <h3>Keywords</h3>
+  <p class="list-of-links">
+        <a href="https://www.npmjs.com/browse/keyword/html">html</a>, 
+        <a href="https://www.npmjs.com/browse/keyword/pdf">pdf</a>, 
+        <a href="https://www.npmjs.com/browse/keyword/phantom">phantom</a>, 
+        <a href="https://www.npmjs.com/browse/keyword/phantomjs">phantomjs</a>, 
+        <a href="https://www.npmjs.com/browse/keyword/nodejs">nodejs</a>
+  </p>
+
+  <h3>Dependencies (1)</h3>
+  <p class="list-of-links">
+                <a href="https://www.npmjs.com/package/phantomjs-prebuilt">phantomjs-prebuilt</a>
+  </p>
+
+    <h3><a href="https://www.npmjs.com/browse/depended/html-pdf">Dependents (64)</a></h3>
+    <p class="list-of-links dependents">
+
+          <a href="https://www.npmjs.com/package/receipt_gen">receipt_gen</a>,
+        
+          <a href="https://www.npmjs.com/package/tracebook">tracebook</a>,
+        
+          <a href="https://www.npmjs.com/package/firefly-pdf-render">firefly-pdf-render</a>,
+        
+          <a href="https://www.npmjs.com/package/html2pdf-cli">html2pdf-cli</a>,
+        
+          <a href="https://www.npmjs.com/package/mission.core">mission.core</a>,
+        
+          <a href="https://www.npmjs.com/package/dokapi">dokapi</a>,
+        
+          <a href="https://www.npmjs.com/package/blocktrail-sdk">blocktrail-sdk</a>,
+        
+          <a href="https://www.npmjs.com/package/ep_better_pdf_export">ep_better_pdf_export</a>,
+        
+          <a href="https://www.npmjs.com/package/cmacc-pdf">cmacc-pdf</a>,
+        
+          <a href="https://www.npmjs.com/package/chordsheet">chordsheet</a>,
+        
+          <a href="https://www.npmjs.com/package/html-template-pdf">html-template-pdf</a>,
+        
+          <a href="https://www.npmjs.com/package/yamp">yamp</a>,
+        
+          <a href="https://www.npmjs.com/package/retalapp">retalapp</a>,
+        
+          <a href="https://www.npmjs.com/package/markup-invoice-pdf">markup-invoice-pdf</a>,
+        
+          <a href="https://www.npmjs.com/package/express-pdf">express-pdf</a>,
+        
+          <a href="https://www.npmjs.com/package/handlebars-to-pdf">handlebars-to-pdf</a>,
+        
+          <a href="https://www.npmjs.com/package/admin_site">admin_site</a>,
+        
+          <a href="https://www.npmjs.com/package/mdToPdf">mdToPdf</a>,
+        
+          <a href="https://www.npmjs.com/package/gulp-html-pdf">gulp-html-pdf</a>,
+        
+          <a href="https://www.npmjs.com/package/chapeau">chapeau</a>,
+        
+          <a href="https://www.npmjs.com/package/boleto-bancoob-sicoob">boleto-bancoob-sicoob</a>,
+        
+          <a href="https://www.npmjs.com/package/denke-note">denke-note</a>,
+        
+          <a href="https://www.npmjs.com/package/markdawn">markdawn</a>,
+        
+          <a href="https://www.npmjs.com/package/json-resume-dynamic">json-resume-dynamic</a>,
+        
+          <a href="https://www.npmjs.com/package/resume-to-pdf">resume-to-pdf</a>,
+        
+          <a href="https://www.npmjs.com/package/marcus">marcus</a>,
+        
+          <a href="https://www.npmjs.com/package/easy-report">easy-report</a>,
+        
+          <a href="https://www.npmjs.com/package/ghmd2pdf">ghmd2pdf</a>,
+        
+          <a href="https://www.npmjs.com/package/ditty-to-pdf">ditty-to-pdf</a>,
+        
+          <a href="https://www.npmjs.com/package/grunt-html-pdf">grunt-html-pdf</a>,
+        
+          <a href="https://www.npmjs.com/package/generate-invoice">generate-invoice</a>,
+        
+          <a href="https://www.npmjs.com/package/node-red-contrib-pdf">node-red-contrib-pdf</a>,
+        
+          <a href="https://www.npmjs.com/package/print-url">print-url</a>,
+        
+          <a href="https://www.npmjs.com/package/litoria">litoria</a>,
+        
+          <a href="https://www.npmjs.com/package/generate-pdf">generate-pdf</a>,
+        
+          <a href="https://www.npmjs.com/package/csv-report">csv-report</a>,
+        
+          <a href="https://www.npmjs.com/package/s2hp">s2hp</a>,
+        
+          <a href="https://www.npmjs.com/package/falcon-invoice">falcon-invoice</a>,
+        
+          <a href="https://www.npmjs.com/package/handlebars-pdf">handlebars-pdf</a>,
+        
+          <a href="https://www.npmjs.com/package/template-to-pdf">template-to-pdf</a>,
+        
+          <a href="https://www.npmjs.com/package/rrl-scraper">rrl-scraper</a>,
+        
+          <a href="https://www.npmjs.com/package/resume-cli">resume-cli</a>,
+        
+          <a href="https://www.npmjs.com/package/alinex-report">alinex-report</a>,
+        
+          <a href="https://www.npmjs.com/package/htwkstundenplan">htwkstundenplan</a>,
+        
+          <a href="https://www.npmjs.com/package/mdpdf">mdpdf</a>,
+                  <a href="https://www.npmjs.com/package/content-generator">content-generator</a>,
+        <a href="https://www.npmjs.com/browse/depended/html-pdf">and more</a>
+    </p>
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "html-pdf",
+      "description": "HTML to PDF converter that uses phantomjs",
+      "url": "https://www.npmjs.com/package/html-pdf",
+      "keywords": "html,pdf,phantom,phantomjs,nodejs",
+      "applicationCategory": "DeveloperApplication",
+      "offers": {
+         "@type": "Offer",
+         "price": "0.00"
+      }
+    }
+  </script>
+
+    <div class="hiring-container" data-template="sidebar"><div class="ad">
+  <p>
+    <a href="http://microapps.com/were-hiring/?utm_source=npm_who_is_hiring_page&amp;utm_medium=web&amp;utm_campaign=npm_who_is_hiring" title="microapps">microapps</a> is hiring.
+    <a class="quiet" href="https://www.npmjs.com/whoshiring">View more…</a>
+  </p>
+</div></div>
+</div>
+
+
+    </div>
+
+  <footer class="pane bg-npm-navy-1">
+  
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <h3 class="h4 type-npm-pastel-3">You Need Help</h3>
+          <hr class="divider-1">
+          <ul class="list-unstyled h6 em-default">
+            <li class="pbl"><a class="type-neutral-11" href="https://docs.npmjs.com/">Documentation</a></li>
+            <li class="pbl"><a class="type-neutral-11" href="https://www.npmjs.com/support">Support / Contact Us</a></li>
+            <li class="pbl"><a class="type-neutral-11" href="http://status.npmjs.org/">Registry Status</a></li>
+            <li class="pbl"><a class="type-neutral-11" href="https://github.com/npm/www/issues">Website Issues</a></li>
+            <li class="pbl"><a class="type-neutral-11" href="https://github.com/npm/npm/issues">CLI Issues</a></li>
+            <li class="pbl"><a class="type-neutral-11" href="https://www.npmjs.com/policies/security">Security</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-md-6 col-md-offset-1">
+          <h3 class="h4 type-npm-pastel-3">About npm</h3>
+          <hr class="divider-1">
+          <ul class="list-unstyled h6 em-default">
+            <li class="pbl"><a class="type-neutral-11" href="https://www.npmjs.com/about">About npm, Inc</a></li>
+            <li class="pbl"><a class="type-neutral-11" href="https://www.npmjs.com/jobs">Jobs</a></li>
+            <li class="pbl"><a class="type-neutral-11" href="https://www.npmjs.com/npm-weekly">npm Weekly</a></li>
+            <li class="pbl"><a class="type-neutral-11" href="http://blog.npmjs.org/">Blog</a></li>
+            <li class="pbl"><a class="type-neutral-11" href="https://twitter.com/npmjs">Twitter</a></li>
+            <li class="pbl"><a class="type-neutral-11" href="https://github.com/npm">GitHub</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-md-6 col-md-offset-1">
+          <h3 class="h4 type-npm-pastel-3">Legal Stuff</h3>
+          <hr class="divider-1">
+          <ul class="list-unstyled h6 em-default">
+            <li class="pbl"><a class="type-neutral-11" href="https://www.npmjs.com/policies/terms">Terms of Use</a></li>
+            <li class="pbl"><a class="type-neutral-11" href="https://www.npmjs.com/policies/conduct">Code of Conduct</a></li>
+            <li class="pbl"><a class="type-neutral-11" href="https://www.npmjs.com/policies/disputes">Package Name Disputes</a></li>
+            <li class="pbl"><a class="type-neutral-11" href="https://www.npmjs.com/policies/privacy">Privacy Policy</a></li>
+            <li class="pbl"><a class="type-neutral-11" href="https://www.npmjs.com/policies/receiving-reports">Reporting Abuse</a></li>
+            <li class="pbl"><a class="type-neutral-11" href="https://www.npmjs.com/policies/">Other policies</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="txt-c container">
+      <a class="npm-loves-you type-neutral-11" href="https://www.npmjs.com/">
+        npm loves you
+      </a>
+    </div>
+  </footer>
+
+  <script defer="" src="./html-pdf_files/vendor.min.js.download"></script>
+  <script defer="" async="" src="./html-pdf_files/3318080746.js.download"></script>
+  <script defer="" async="" src="./html-pdf_files/elqCfg.min.js.download"></script><!-- Eloqua -->
+
+
+
+<!-- pid&#x3D;20213 4a84ce1328b1406ffc410216a232eb96b458680a https://www.npmjs.com www-14-west.internal.npmjs.com  -->
+<div class="drop-down-menu-overlay" data-drop-down-menu="product-navigation"></div><object id="__symantecPKIClientMessenger" data-supports-flavor-configuration="true" data-extension-version="0.5.0.109" style="display: none;"></object><span id="__symantecPKIClientDetector" style="display: none;">__PRESENT</span><div class="autocomplete-container" style="position: absolute; display: none; max-height: 400px; z-index: 9999;"><div class="autocomplete-suggestions" style="position: absolute; display: none; max-height: 400px; z-index: 9999;"></div></div></body></html>
